@@ -13,3 +13,9 @@ button{background:var(--primary);color:#fff;border:none;font-weight:600;cursor:p
 button:hover{transform:translateY(-1px)}
 .alert{background:#fff3cd;border:1px solid #ffe69c;padding:10px;border-radius:10px;margin-bottom:12px}
 .good{color:var(--good)}.ok{color:var(--ok)}.bad{color:var(--bad)}
+p{
+    text-align: center;
+    font-weight: bold;
+    font-size: medium;
+    color: #2563eb;
+}
