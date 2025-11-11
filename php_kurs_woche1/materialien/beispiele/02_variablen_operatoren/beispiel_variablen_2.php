@@ -15,7 +15,7 @@
 </head>
 <body>
     <?php
-        
+        /*
         $einString = 'Ich bin eine Variable'; //Datentype: String
         echo '<p>Der Inhalt der Variable ist: $einString.</p>';
         echo '<p>Der Inhalt der Variable ist: ' . $einString . '.</p>';
@@ -27,6 +27,7 @@
         $prod = $preisZiege  * $menge;
         echo "<p> Eine Ziege kostet $preisZiege</p>";
         echo "<p> Für $menge Ziegen bekommt man $prod Kamele.</p>"
+        */
         /* ? === Konstanten
         ==================== 
         ==================
