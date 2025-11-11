@@ -8,6 +8,17 @@ declare(strict_types=1);
  */
 $punkte = 88; // TODO: anpassen oder via $_GET['p']
 $note = "";   // TODO: if/elseif/else setzen
+
+if($punkte >=90){
+  $note = "Sehr gut";
+}
+elseif($punkte >=75){
+  $note = "Gut";
+}
+else{
+  $note = "Ok";
+}
+
 ?>
 <!doctype html>
 <html lang="de">
@@ -21,6 +32,10 @@ $note = "";   // TODO: if/elseif/else setzen
   <header><h1>Übung 3 – Notenrechner</h1></header>
   <main class="container">
     <!-- TODO: Punkte/Note ausgeben -->
+      <p>Punkte: <?= $punkte ?> -> Note: <strong class="<?= $note ===
+    'Sehr gut' ? 'good' : ($note === 'Gut' ? 'ok' : 'bad') ?>" ><?= $note ?></strong></p>
+      
+
   </main>
 </body>
 </html>
