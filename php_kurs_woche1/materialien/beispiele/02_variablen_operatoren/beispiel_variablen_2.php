@@ -15,7 +15,7 @@
 </head>
 <body>
     <?php
-        /*
+        
         $einString = 'Ich bin eine Variable'; //Datentype: String
         echo '<p>Der Inhalt der Variable ist: $einString.</p>';
         echo '<p>Der Inhalt der Variable ist: ' . $einString . '.</p>';
@@ -26,8 +26,8 @@
 
         $prod = $preisZiege  * $menge;
         echo "<p> Eine Ziege kostet $preisZiege</p>";
-        echo "<p> Für $menge Ziegen bekommt man $prod Kamele.</p>"
-        */
+        echo "<p> Für $menge Ziegen bekommt man $prod Kamele.</p>";
+       
         /* ? === Konstanten
         ==================== 
         ==================
@@ -38,6 +38,16 @@
         const MIN_TAG = 24 * 60;
 
         echo '<p> Ein Tag hat ', MIN_TAG, 'Minuten bzw. ', SEK_TAG, ' Sekunden.</p>';
+        
+        /* ?=== Verketten und Rechnen
+        ================================
+        ============================= 
+        */
+        $zahl = 5;
+        $nochEineZahl = 37;
+        echo "<p>Die Summe der Zahlen $zahl und $nochEineZahl ergibt :" .($zahl + $nochEineZahl) . "</p>"
+        
+        
         ?>
 </body>
 </html>
