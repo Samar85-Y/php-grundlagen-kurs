@@ -19,3 +19,11 @@ p{
     font-size: medium;
     color: #2563eb;
 }
+table{
+    border-collapse: collapse;
+}
+td{
+    border: 1px solid rgb(18, 15, 226);
+    padding: 8px 10px;
+    text-align: center;
+}
