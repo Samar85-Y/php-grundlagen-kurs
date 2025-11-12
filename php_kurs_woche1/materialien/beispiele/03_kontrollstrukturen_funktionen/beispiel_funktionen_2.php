@@ -28,15 +28,6 @@
             $return .= "$value<br>";
             return $return;
             }
-           // Parameter Übergabe per Referenz
-            function quadrat_ref(int &$value): string{
-            $return = "Das Quadrat von $value ist: ";
-            $value *= $value;
-
-            $return .= "$value<br>";
-            return $return;
-            }
-
             $zahl =2;
         ?>
         <p>Der Ausgangswert von $zahl ist : <b> <?= $zahl ?></b>.</p>

@@ -1,14 +1,14 @@
 <?php
 declare(strict_types=1);
-function anfang(){
+function anfang($name){
   
-  echo "<p>Dieses Program wurde geschrieben von Samar</p>";
+  echo "<p>Dieses Program wurde geschrieben von $name</p>";
 }
 
 
-function mitte(){
+function mitte($name){
   
-  echo "<p>Dieses Program wurde geschrieben von Samar</p>";
+  echo "<p>Dieses Program wurde geschrieben von $name</p>";
 }
 ?>
 <!DOCTYPE html>
@@ -17,7 +17,7 @@ function mitte(){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/style.css">
-    <title>Übung 5 »u_funktion_einfach«</title>
+    <title>Übung 6 »u_funktion_parameter1«</title>
     <style>
       table{
     border-collapse: collapse;
@@ -31,17 +31,17 @@ tr{
     </style>
 </head>
 <body>
-     <header><h1>Übung 5 »u_funktion_einfach«</h1></header>
+     <header><h1>Übung 6 »u_funktion_parameter1«</h1></header>
   <main class="container">
  
   <table>
     <p>Anfang des Programms</p>
     <tr>
-      <?php echo anfang()?>
+      <?php echo anfang('Samar')?>
     </tr>
     <p>Mitte des Programms</p>
     <tr>
-      <?php echo mitte()?>
+      <?php echo mitte('Samar')?>
     </tr>
     <p>Ende des Programms</p>
 </main> 
