@@ -14,18 +14,14 @@ declare(strict_types=1);
   <main class="container">
     <?php
             
-            function vermerk(string $nname, string $vorname, string $abteilung){
-                $email = $vorname. "." .$nachname. "@" .$abteilung. ".phpdevel.de.";
-                echo "Programmteil von ".$vorname . "." .$nachname. ",  Abteilung".$abteilung." <br>";
-                echo "Email:" .$email
+            function vermerk(string $vorname , string $nachname, string $abteilung){
+                $email = $vorname . "." . $nachname . "@" . $abteilung . ".phpdevel.de.";
+                echo "Programmteil von ". $vorname . " " . $nachname . ",  Abteilung" . $abteilung  . " <br>";
+                echo "Email:" . $email . " <br>";
             
             }
-          
-            echo "Der Mittelwert  von 4, 7 und 6 ist: ". mittel(4,7,6) ." <br>";
-            echo "Das Mittelwert von 44, 67.5 und 1 ist: ". mittel(44, 67.5,1) ." <br>";
-            echo "Das Mittelwert von -5, 0 und -13 ist: ". mittel(-5,0,-13) ." <br>";
-            echo "Das Mittelwert von  0.001, 0.0081 und 0.0032 ist: ". mittel(0.001, 0.0081, 0.0032) ." <br>";
-            echo "Das Mittelwert von  5,8 und 2 ist: ". mittel(5,8,2) ." <br>";
+            echo vermerk("Samar", "Yousef", "FE2");
+            echo vermerk("Hans", "Heim", "SU3");
 
         ?>
 </main> 
