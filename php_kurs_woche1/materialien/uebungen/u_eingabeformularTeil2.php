@@ -29,7 +29,7 @@
 
         echo "<p>";
         echo $vorname . " " . $nachname . "<br>";
-        echo $straße .  "<br>";
+        echo $strasse .  "<br>";
         echo $platz . " " . $ort .  "<br>";
         
         echo "</p>";

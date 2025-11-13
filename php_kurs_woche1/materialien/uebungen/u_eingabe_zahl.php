@@ -16,9 +16,21 @@
      <header><h1>Übung 15 »u_eingabe_zahl«</h1></header>
   <main class="container">
 
-  <h2>Ihre Adresse lautet: </h2>
+  
     <?php
+ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
+        $zahl = htmlspecialchars($_POST['zahl']);
+        
+
+        echo "<p>";
+        echo "Das quadrat von " .$zahl . " " . $zahl . "<br>";
+        echo "</p>";
+    }
+    else{
+        echo "<p>Keine Daten gefunden.</p>";
+
+    }
     
         
         ?>     
