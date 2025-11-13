@@ -1,8 +1,8 @@
 <?php
 declare(strict_types=1);
 error_reporting(E_ALL);
-ini_set('display_errors', true);
-//indizierte Array
+ini_set('display_errors',true);
+// indizierte Arrays
 $posts = ['Post 1', 'Post 2', 'Post 3'];
 $cities = array(
   'Leipzig',
@@ -10,33 +10,47 @@ $cities = array(
   'Erfurt'
 );
 
-//assoziative Arrays
+// assoziative Arrays
 $maincities = array(
-'Schweiz' => 'Bern',
-'Franktreich' => 'Paris',
-'Deutschland' => 'Berlin'
+  'Schweiz' => 'Bern',
+  'Frankreich' => 'Paris',
+  'Deutschland' => 'Berlin'
 );
 
-//mehrdimensionale Arrays
+// mehrdimensionale Arrays
 $posts2 = array(
-array(
-  'title' => 'Erster Beitrage',
-  'author' => 'Alex',
-  'content' => 'Willkommen im Blog!'
-   ),
-array(
-  'title' => 'Zweiter Beitrage',
-  'author' => 'Sam',
-  'content' => 'Heute lernen wir Arrays.'
-    ),
-); 
+  array(
+    'title' => 'Erster Beitrag',
+    'author' => 'Alex',
+    'content' => 'Willkommen im Blog!'
+  ),
+  array(
+    'title' => 'Zweiter Beitrag',
+    'author' => 'Sam',
+    'content' => 'Heute lernen wir Arrays.'
+  ),
+);
 
-//Arrays für tabellarische Ausgaben
+// Arrays für tabellarische Ausgaben
 $laender = array(
   'Spanien' => array(
-      'Hauptstadt' => 'Madrid',
-
+    'Hauptstadt' => 'Madrid',
+    'Sprache' => 'spanisch',
+    'Waehrung' => 'Euro',
+    'Flaeche' => 504645
   ),
+  'England' => array(
+    'Hauptstadt' => 'London',
+    'Sprache' => 'englisch',
+    'Waehrung' => 'Pfund Sterling',
+    'Flaeche' => 130395
+  ),
+  'Portugal' => array(
+    'Hauptstadt' => 'Lissabon',
+    'Sprache' => 'portugiesisch',
+    'Waehrung' => 'Euro',
+    'Flaeche' => 92345
+  )
 );
 ?>
 <!doctype html>
@@ -52,45 +66,51 @@ $laender = array(
   <main class="container">
     <?php foreach ($posts as $post): ?>
       <p><?= $post ?></p>
-      <?php endforeach; ?>
+    <?php endforeach; ?>
 
-      <p>Zweite Stadt im Araay der Städte: <?= $cities[1]; ?></p>
-    
-      <?php $country = 'Schweiz'; ?>
-  
-      <p>Die Hauptstadt von <?= $country ?> ist <?= $maincities [$country] ?> </p>
-  
-      <?php foreach ($maincities as $country => $city): ?>
-      <p><?= $country ?> : <?= $city ?></p>
-      <?php endforeach; ?>
+    <p>Zweite Stadt im Array der Städte: <?= $cities[1]; ?></p>
 
-      <h2>Unsere aktullen Beitäge</h2>
-      <?php foreach($posts2 as $p): ?>
-        <article class="post">
-          <h3><?= htmlspecialchars($p['title']) ?></h3>
-          <p class="meta">von <?= htmlspecialchars($p['author']) ?></p>
-          <p><?= nl2br(htmlspecialchars($p['content'])) ?></p>
-        </article>
-        <?php endforeach; ?>
+    <?php $country = 'Deutschland'; ?>
 
-        <h2>Informationen zu Ländern</h2>
-        <table>
-          <tr>
-            <th>Land</th>
-            <th>Hauptstadt</th>
-            <th>Sprache</th>
-            <th>Währung</th>
-            <th>Fläche</th>
-          </tr>
-        <?php foreach($lander as $land => $infos) :?>
-          <tr>
-            <td><?= $land ?></td>
-            <?php foreach($infos as $info):?>
+    <p>Die Hauptstadt von <?= $country ?> ist <?= $maincities[$country] ?></p>
+
+    <?php foreach ($maincities as $country => $city): ?>
+      <p><?= $country ?>: <?= $city ?> </p>
+    <?php endforeach; ?>
+
+    <h2>Unsere aktuellen Beiträge</h2>
+
+    <?php foreach ($posts2 as $p): ?>
+      <article class="post">
+        <h3><?= htmlspecialchars($p['title']) ?></h3>
+        <p class="meta">von <?= htmlspecialchars($p['author']) ?></p>
+        <p><?= nl2br(htmlspecialchars($p['content'])) ?></p>
+      </article>
+    <?php endforeach; ?>
+
+    <h2>Informationen zu Ländern</h2>
+
+    <table>
+      <tr>
+        <th>Land</th>
+        <th>Hauptstadt</th>
+        <th>Sprache</th>
+        <th>Währung</th>
+        <th>Fläche</th>
+      </tr>
+      <?php foreach( $laender as $land => $infos ): ?>
+        <!-- äußere Schleife für die Zeilen und das Land -->
+         <tr>
+          <td><?= $land ?></td>
+
+          <!-- innere Schleife für die Info-Zellen -->
+          <?php foreach( $infos as $info ): ?>
             <td><?= $info ?></td>
-            <?php endforeach; ?>
-          </tr>
           <?php endforeach; ?>
-        </table>
-    </main>
+         </tr>
+         
+      <?php endforeach; ?>
+    </table>
+  </main>
 </body>
 </html>
