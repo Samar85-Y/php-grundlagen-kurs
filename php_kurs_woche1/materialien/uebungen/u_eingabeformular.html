@@ -2,41 +2,37 @@
 <html lang="de">
 
 <head>
-	<meta charset="UIF-8">
-	<meta name="viewport" content="width-device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../style/style.css">
-	<title>Eingabe von Zahl</title>
+	<title>Eingabeformular</title>
 </head>
 
 <body>
-	<h1>Bitte tragen Sie die Zahl ein, die quadriert werden soll. </h1>
-	<form action="u_eingabeformularTeil2.php" method="post">
+	<h1>Bitte tragen Sie die Adresse ein. </h1>
+	<main class="container">
+		<form action="u_eingabeformularTeil2.php" method="post">
 
-		<label for="vorname">Vorname</label>
-		<input type="text" id="vorname" name="vorname" value="Max"><br>
+			<label for="vorname"><b>Vorname</b></label>
+			<input type="text" id="vorname" name="vorname" value="Max"><br>
 
-		<label for="nachname">Zahl</label>
-		<input type="text" id="nachname" name="nachname" value="Müller"><br>
+			<label for="nachname"><b>Nachname</b></label>
+			<input type="text" id="nachname" name="nachname" value="Müller"><br>
 
-		<label for="strasse">Straße</label>
-		<input type="text" id="strasse" name="strasse" value="Manheimweg 7"><br>
+			<label for="strasse"><b>Straße</b></label>
+			<input type="text" id="strasse" name="strasse" value="Manheimweg 7"><br>
 
-		<label for="platz">Platz</label>
-		<input type="number" id="platz" name="platz" value="20587"><br>
+			<label for="platz"><b>Platz</b></label>
+			<input type="number" id="platz" name="platz" value="20587"><br>
 
-		<label for="ort">Ort</label>
-		<input type="text" id="ort" name="ort" value="Erfurt"><br>
+			<label for="ort"><b>Ort</b></label>
+			<input type="text" id="ort" name="ort" value="Erfurt"><br><br>
 
-		<input type="submit" name="submit" value="Senden">
-		<input type="reset" name="reset" value="Zurücksetzen">
+			<button type="submit" class="my-button">Senden </button><br><br>
+			<button type="reset" class="my-button">Zurücksetzen</button>
+		</form>
 
-
-
-
-
-
-
-	</form>
+	</main>
 
 </body>
 

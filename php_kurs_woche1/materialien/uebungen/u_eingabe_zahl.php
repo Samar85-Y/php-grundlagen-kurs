@@ -21,10 +21,10 @@
  if($_SERVER["REQUEST_METHOD"] == "POST"){
 
         $zahl = htmlspecialchars($_POST['zahl']);
-        
+        $quadrat = $zahl * $zahl;
 
         echo "<p>";
-        echo "Das quadrat von " .$zahl . " " . $zahl . "<br>";
+        echo "Das quadrat von " . $zahl . " ist " . $quadrat . "<br>";
         echo "</p>";
     }
     else{
