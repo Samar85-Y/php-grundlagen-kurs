@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Bitte tragen Sie die Adresse ein. </h1>
+    <main class="container">
+        <form action="benutzer-form.php" method="post">
+
+            <label for="vorname"><b>Vorname</b></label>
+            <input type="text" id="vorname" name="vorname" value="Max"><br>
+
+            <label for="nachname"><b>Nachname</b></label>
+            <input type="text" id="nachname" name="nachname" value="Müller"><br>
+
+            <label for="email"><b>E-Mail-Adresse:</b></label>
+            <input type="text" id="email" name="email"><br>
+
+            <textarea name="nachricht" id="nachricht">Nachricht</textarea>
+
+            <button type="submit" class="my-button">Senden </button><br><br>
+            <button type="reset" class="my-button">Zurücksetzen</button>
+        </form>
+
+    </main>
+</body>
+
+</html>
