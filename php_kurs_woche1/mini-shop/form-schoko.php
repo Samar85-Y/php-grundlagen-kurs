@@ -12,6 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Schokolade - Bestellformular</title>
+    <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
    <header>
@@ -19,7 +20,7 @@
    </header> 
    <main>
     <p>Tragen Sie bitte die gewünschte Menge Schokolade ein</p>
-    <form action="artikel.in.php" method="Post">
+    <form action="artikel.inc.php" method="Post">
     <table>
         <tr>
             <th>Art.-Nr</th>
@@ -27,10 +28,9 @@
             <th>Menge</th>
             <th>Einheit</th>
         </tr>
+
         <?php
-            
             foreach($array_schoko as $artnr => $arttikel):
-            
         ?>
         <tr>
             <td><?= $artnr ?></td>
