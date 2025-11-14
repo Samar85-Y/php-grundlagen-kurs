@@ -135,11 +135,6 @@ td {
     transform: scale(0.05);
 }
 
-button:active {
+.my-button:active {
     transform: scale(0.98);
-}
-
-button:focus {
-    outline: 2px solid rgb(233, 24, 41);
-    outline-offset: 2px;
 }
