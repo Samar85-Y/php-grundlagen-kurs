@@ -1,5 +1,16 @@
 <?php
 declare(strict_types=1);
+
+error_reporting(E_ALL);
+ini_set('display_errors', true);
+require_once __DIR__ . '/Note.php';
+$notes =[
+  new Note( 'Erster Eintrag', 'Eigenschaften'),
+  new Note( 'Zweiter Eintrag', 'Methoden.'),
+  
+]
+/*$path = __DIR__ . '/note.json';
+$notes = is_file($path) ? json_decode( (string)file_get_contents($path), true) : [];*/
 /**
  * Aufgabe:
  * 1) Definiere class Note (title, content, __construct).
@@ -19,6 +30,12 @@ declare(strict_types=1);
   <header><h1>Übung 4 – Note-Klasse</h1></header>
   <main class="container">
     <!-- TODO -->
+    <?php foreach($notes as $n) : ?>
+    <article class= "post">
+      <h2><?= htmlspecialchars($n->getTitle()) ?></h2>
+      <p><?= nl2br(htmlspecialchars($n->getContent())) ?></p>
+    </article>
+    <?php endforeach; ?>
   </main>
 </body>
 </html>
