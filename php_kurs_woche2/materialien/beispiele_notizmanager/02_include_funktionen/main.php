@@ -1,6 +1,10 @@
 <?php
 declare(strict_types=1);
-
+error_reporting(E_ALL);
+    ini_set('display_errors','1');
+    //echo '<pre>', print_r(__DIR__,true), '</pre>';
+  require_once __DIR__ .'/inc/tools.php';
+  $result = preisMitwst(100, 0.19, 10);
 ?>
 <!doctype html>
 <html lang="de">
