@@ -18,8 +18,7 @@ $_SESSION['mail'] = $_POST['mail'] ?? '';
 </head>
 <body>
 
-<h1>Zusammenfassung</h1>
-<p>Dies sind alle in der Session gespeicherten Informationen:</p>
+<p>Dies sind in der Session gesammelten Daten:</p>
 
 <pre style="font-size: 1.1em;">
 <?php
@@ -29,14 +28,13 @@ foreach ($_SESSION as $key => $value) {
 ?>
 </pre>
 
-<p>Die Session wird jetzt beendet.</p>
-
 <?php
 session_unset();
 session_destroy();
 ?>
 
-<p>Damit ist die Session beendet</p><a href="u_formular.php">Klicken Sie hier</a>
+<p>Damit ist die Session beendet<a href="u_formular.php">Klicken Sie hier,</a>
+um eine neue Session zu beginnen.</p>
 
 </body>
 </html>

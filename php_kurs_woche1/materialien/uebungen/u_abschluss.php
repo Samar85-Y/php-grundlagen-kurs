@@ -18,7 +18,7 @@
     <p>Bitte geben Sie noch Ihre Kontaktdaten ein:</p>
 
 
-<form action="u_ende.php" method="post">
+<form action="u_kasse.php" method="post">
 
     <label>Vorname:<br>
         <input type="text" name="vorname">
