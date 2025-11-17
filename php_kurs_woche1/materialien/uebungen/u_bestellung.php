@@ -15,6 +15,7 @@ $_SESSION['tanne'] = $_POST['tanne'] ?? 0;
 <head>
     <meta charset="UTF-8">
     <title>Honigbestellung – Übersicht</title>
+    <link rel="stylesheet" href="../../style/style.css">
 </head>
 <body>
 
@@ -30,7 +31,7 @@ $_SESSION['tanne'] = $_POST['tanne'] ?? 0;
 
 <p><strong>Session-ID:</strong> <?php echo session_id(); ?></p>
 
-<a href="u_abschluss.php">Weiter zur Eingabe persönlicher Daten</a>
+<a href="u_abschluss.php">Weiter zur Eingabe persönlicher Daten</a><p>und dem Abschluss der Bestellung.</p> 
 
 </body>
 </html>
