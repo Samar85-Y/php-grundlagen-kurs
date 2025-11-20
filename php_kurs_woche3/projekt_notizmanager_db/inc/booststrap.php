@@ -1,0 +1,9 @@
+<?php
+declare(strict_types=1);
+
+require __DIR__ . '/../vendor/autoload';
+
+use App\Env;
+
+//Projektroot Laden (eine Ebene höher)
+Env::load(dirname(__DIR__));
