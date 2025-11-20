@@ -16,7 +16,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Notiz-Manager</title>
-        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
         <header>
@@ -28,7 +28,19 @@
         <main class="container">
             <section class="card">
                 <h2>Neue Notiz</h2>
-                Formular für neue Notizen
+                <form action="add.php" method="post">
+                    <label>Title<input type="text" name="title" require></label>
+                    <label>Inhalt<textarea name="content" rows= "10"require></textarea></label>
+                    <label>Kategorie
+                        <select name="category_id">
+                            <option value=""disabled selected>- keine -</option>
+                            <?php foreach ($pdo->query('SELECT id, name FROM categories ORDER BY name')as $cat):?>
+                                <option value="<?= (int) $cat->id ?>"><?=safe($cat->name) ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </label>
+                    <button type="submit">Speicheren</button>
+                </form>
             </section>
 
             <section class="card">
@@ -44,9 +56,9 @@
                     </thead>
                     <?php foreach ($notes as $n): ?>
                         <tr>
-                            <td><?= $n->title?></td>
+                            <td><?= safe($n->title) ?></td>
                             <td><?= $n->category  ?></td>
-                            <td><?= $n->created_at ?></td>
+                            <td><?= safe($n->created_at) ?></td>
                             <td>
                                 <a href="edit.php?id=<?= (int)$n->id ?>"calss= "button">Bearbeiten</a>
                                 
