@@ -61,6 +61,7 @@
                             <td><?= safe($n->created_at) ?></td>
                             <td>
                                 <a href="edit.php?id=<?= (int)$n->id ?>"calss= "button">Bearbeiten</a>
+                                <a href="delete.php?id=<?= (int)$n->id ?>"calss= "button">Löschen</a>
                                 
                             </td>
                         </tr>
