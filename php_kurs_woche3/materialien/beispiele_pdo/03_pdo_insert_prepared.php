@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 require_once __DIR__ . '/inc/pdo-connect.php';
+include_once __DIR__ . '../config/config.php';
 
 $sql = 'INSERT INTO notes(title, content) VALUES (:t, :c)';
 
