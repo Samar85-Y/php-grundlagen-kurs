@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-require __DIR__ . 'bootstap.php';
+require __DIR__ . '/bootstrap.php';
 
 try {
     $dsn = sprintf(
@@ -14,10 +14,10 @@ try {
     $pdo = new PDO(
         $dsn,
         $_ENV['DB_USER'],
-        $_ENV['DB_PASS'],
+        $_ENV['DB_PASSWORD'],
         [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ,
         ]
 
     );
