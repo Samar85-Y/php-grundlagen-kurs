@@ -101,3 +101,20 @@ td {
     border-bottom: 1px solid var(--border);
     text-align: left
 }
+
+nav {
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    ul {
+        display: flex;
+        list-style: none;
+    }
+
+    li {
+        margin-right: 1rem;
+    }
+}
