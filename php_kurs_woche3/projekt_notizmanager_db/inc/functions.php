@@ -96,3 +96,54 @@ function require_login(): void {
     exit;
   }
 }
+
+function current_user_id(): ?int {
+  if(!is_logged_in()) {
+    return null;
+  }
+  // Hier könnte man auch die User-ID in der Session speichern
+  // und direkt zurückgeben
+  return null;
+}
+
+/*function getNotes($pdo, $userId) {
+    // Öffentliche
+    $sqlPublic = "
+        SELECT n.*, u.username
+        FROM notes n
+        JOIN users u ON n.user_id = u.id
+        WHERE n.visibility = 'public'
+    ";
+
+    // Private
+    $sqlPrivate = "
+        SELECT n.*, u.username
+        FROM notes n
+        JOIN users u ON n.user_id = u.id
+        WHERE n.visibility = 'privat'
+        AND n.user_id = :uid
+    ";
+
+    // Geteilte
+    $sqlShared = "
+        SELECT n.*, u.username
+        FROM notes n
+        JOIN shared_notes s ON n.id = s.note_id
+        JOIN users u ON n.user_id = u.id
+        WHERE s.shared_with = :uid
+    ";
+
+    $stmtPub = $pdo->query($sqlPublic);
+    $public = $stmtPub->fetchAll(PDO::FETCH_ASSOC);
+
+    $stmtPriv = $pdo->prepare($sqlPrivate);
+    $stmtPriv->execute(['uid' => $userId]);
+    $private = $stmtPriv->fetchAll(PDO::FETCH_ASSOC);
+
+    $stmtShare = $pdo->prepare($sqlShared);
+    $stmtShare->execute(['uid' => $userId]);
+    $shared = $stmtShare->fetchAll(PDO::FETCH_ASSOC);
+
+    return array_merge($public, $private, $shared);
+}
+*/

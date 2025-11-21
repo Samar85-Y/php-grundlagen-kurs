@@ -16,6 +16,28 @@ $notes = getAllNotes($pdo);
             <?php endforeach; ?>
           </select>
         </label>
+        <label>Sichtbarkeit
+          <select name="visibility">
+            <option value="" disabled selected>- keine -</option>
+            <option value="private">Privat</option>
+            <option value="public">Öffentlich</option>
+            <option value="shared">Geteilt</option>
+          </select>
+            
+            <?php foreach ($notes as $n): ?>
+            <h3><?= $n->title ?></h3>
+            <p><?= nl2br($n->content) ?></p>
+      
+            Kategorie: <?= $n->category ?> |
+            Sichtbarkeit: <?= $n->visibility ?> |
+            User: <?= $n->username ?> |
+            Datum: <?= $n->created_at ?>
+        
+    
+          <?php endforeach; ?>
+
+            
+        </label>
         <button type="submit">Speichern</button>
       </form>
     </section>

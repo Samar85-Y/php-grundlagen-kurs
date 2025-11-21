@@ -48,7 +48,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
   <?php if($success): ?>
     <p class="alert alert-success"><?= safe($success) ?></p>
   <?php endif; ?>
-
+    <section class="card">
+      <h2>Passwort ändern</h2>
   <form action="<?= $_SERVER['SCRIPT_NAME']; ?>" method="post">
     <label>Aktuelles Passwort:
       <input type="password" name="current_password" required>
@@ -62,5 +63,5 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     <button type="submit">Passwort ändern</button>
     <a href="index.php" class="button">Zurück auf Los!</a>
   </form>
-
+</section>
 </main>
