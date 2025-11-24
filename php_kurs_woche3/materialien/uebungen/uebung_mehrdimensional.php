@@ -19,7 +19,7 @@ $sportfest = [
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../php_kurs_woche3/style/style.css">
-    <title>Übung aus Kapitel 5</title>
+    <title>Übung 2: aus Kapitel 5</title>
 </head>
 <body>
     <header>

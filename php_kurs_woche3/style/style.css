@@ -83,6 +83,7 @@ table {
     border-collapse: collapse;
     width: 100%;
     margin-top: 1rem;
+    border-radius: 2px;
 }
 
 td {
@@ -95,4 +96,11 @@ th {
     border: 1px solid rgb(18, 15, 226);
     padding: 8px 10px;
     text-align: center;
+}
+
+th,
+td {
+    padding: 10px;
+    border-bottom: 1px solid var(--border);
+    text-align: left
 }
