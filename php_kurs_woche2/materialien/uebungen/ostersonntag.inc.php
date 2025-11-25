@@ -31,7 +31,21 @@ Zur Umsetzung der Formel in einem PHP-Programm gibt es die beiden folgenden Hinw
 
 function ostersonntag($jahr) {
     
-    
+    /* Das Jahr wird über den Parameter $j an die Funktion geliefert.
+   $t und $m sind Referenzen für die Variablen für Tag und Monat.
+   Die Werte stehen nach dem Aufruf der Funktion an der Aufrufstelle zur Verfügung.
+
+
+   Innerhalb der Funktion wird das Ergebnis in einzelnen Schritten bestimmt:
+      Der Wert von $d wird gemäß der Formel errechnet.
+      Der Wert von $D ergibt sich nach einer Verzweigung aus $d.
+      Der Wert von $e wird gemäß der Formel errechnet.
+      Liegt der errechnete Tag nicht mehr im Monat März, müssen Tag und Monat
+         auf den entsprechenden Tag im Monat April umgerechnet werden. Ein Beispiel:
+         Aus dem 36.03. wird der 05.04.
+      Die Zahlen werden in Text umgewandelt.
+      Bei einstelligen Zahlen wird eine Null vorangestellt. 
+      */
 
     $a = $jahr % 19;                    // Position im 19-jährigen Mondzyklus (Metonischer Zyklus)
     $b = $jahr % 4;                     // Position im 4-jährigen Schaltzyklus
@@ -50,43 +64,31 @@ function ostersonntag($jahr) {
     $d = (19 * $a + $m) % 30;           // Anzahl Tage vom 21. März bis zum Vollmond
     $e = (2 * $b + 4 * $c + 6 * $d + $n) % 7;  // Anzahl Tage vom Vollmond bis zum nächsten Sonntag
     
-    
+    // Berechnung des Ostersonntags als Tagesnummer im Jahr
     $ostertag = 22 + $d + $e;
     
-    
+    // Umrechnung in Tag und Monat
     if ($ostertag == 57) {
         
         $tag = 19;
         $monat = 4;
+        
     } elseif ($ostertag == 56 && $d == 28 && $e == 6 && $a > 10) {
         
         $tag = 18;
         $monat = 4;
+        
     } elseif ($ostertag > 31) {
         
         $tag = $ostertag - 31;
         $monat = 4;
+        
     } else {
         
         $tag = $ostertag;
         $monat = 3;
     }
     
-    return sprintf("%02d.%02d.%d", $tag, $monat, $jahr);
-}
-/* Das Jahr wird über den Parameter $j an die Funktion geliefert.
-   $t und $m sind Referenzen für die Variablen für Tag und Monat.
-   Die Werte stehen nach dem Aufruf der Funktion an der Aufrufstelle zur Verfügung.
-
-
-   Innerhalb der Funktion wird das Ergebnis in einzelnen Schritten bestimmt:
-      Der Wert von $d wird gemäß der Formel errechnet.
-      Der Wert von $D ergibt sich nach einer Verzweigung aus $d.
-      Der Wert von $e wird gemäß der Formel errechnet.
-      Liegt der errechnete Tag nicht mehr im Monat März, müssen Tag und Monat
-         auf den entsprechenden Tag im Monat April umgerechnet werden. Ein Beispiel:
-         Aus dem 36.03. wird der 05.04.
-      Die Zahlen werden in Text umgewandelt.
-      Bei einstelligen Zahlen wird eine Null vorangestellt. */
-
+    return sprintf("%02d.%02d.%d", $tag, $monat, $jahr); // Rückgabe des Datums im Format TT.MM.JJJJ
+    }
 ?>

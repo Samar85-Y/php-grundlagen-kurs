@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <title>Daten auswählen</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body>
+    <h2>Anzeige der Festplatten aus der Preisgruppe:</h2>
+
+    <form action="u_db_radio.php" method="post">
+
+        <input type="radio" name="preisgruppe"> bis 120 € einschl<br>
+        <input type="radio" name="preisgruppe"> ab 120 € ausschl. bis 140 € einschl<br>
+        <input type="radio" name="preisgruppe"> ab 140 € ausschl<br><br><br>
+        <input type="checkbox" name="sortiert"> Ausgabe nach Preis (absteigend) sortiert<br><br>
+
+        <button type="submit">Senden</button>
+        <button type="reset">Zurücksetzen</button>
+        <p>
+    </form>
+</body>
+
+</html>
