@@ -26,6 +26,6 @@ ini_set('display_errors','1');
         </textarea><br><br>  
 
         <p>Suchbegriff:</p><input type="text"><br><br>
-        <button type="submit">Suche nach:</button>
+        <button type="submit">Zeichenkette suchen</button>
 </body>
 </html>
