@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Daten auswählen</title>
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../../../php_kurs_woche3/style/style.css">
 </head>
 
 <body>
@@ -12,9 +12,9 @@
 
     <form action="u_db_radio.php" method="post">
 
-        <input type="radio" name="preisgruppe"> bis 120 € einschl<br>
-        <input type="radio" name="preisgruppe"> ab 120 € ausschl. bis 140 € einschl<br>
-        <input type="radio" name="preisgruppe"> ab 140 € ausschl<br><br><br>
+        <input type="radio" name="preisgruppe" value="1"> bis 120 € einschl<br>
+        <input type="radio" name="preisgruppe" value="2"> ab 120 € ausschl. bis 140 € einschl<br>
+        <input type="radio" name="preisgruppe" value="3"> ab 140 € ausschl<br><br><br>
         <input type="checkbox" name="sortiert"> Ausgabe nach Preis (absteigend) sortiert<br><br>
 
         <button type="submit">Senden</button>

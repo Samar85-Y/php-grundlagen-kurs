@@ -11,3 +11,4 @@ try {
 } catch (PDOException $e) {
     echo 'DB-Fehler' . htmlspecialchars($e->getMessage());
 }
+
